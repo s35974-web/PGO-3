@@ -7,7 +7,7 @@ public class ProduktMenu{
     private static int liczbaProduktow = 0;
 
 
-    public ProduktMenu(String nazwa, double cena,String kategoria,String kod){
+    public ProduktMenu(String kod, String nazwa,double cena ,String kategoria){
         this.nazwa = nazwa;
         this.cena = cena;
         this.kategoria = kategoria;
@@ -40,10 +40,19 @@ public class ProduktMenu{
         return "Produkt: " + nazwa + ", kod: " + kod + "cena:" + cena + "kategoria:" + kategoria;
     }
 
-//    @Override
-//    public boolean equals(){
-//
-//    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if (!(obj instanceof ProduktMenu)) {
+            return false;
+        }
+
+        ProduktMenu inny = (ProduktMenu) obj;
+        return this.kod.equals(inny.kod);
+    }
 
 
 

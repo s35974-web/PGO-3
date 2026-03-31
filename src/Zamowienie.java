@@ -41,7 +41,7 @@ public class Zamowienie {
 
     @Override
     public String toString() {
-        return "Zamowienie numer " + numerZamowienia + ", klient: " + klient.pelneDane() + ", produkty: " + produkty + ", oplacone: " + oplacone;
+        return "Zamowienie numer " + numerZamowienia + " klient: " + klient.pelneDane() + " produkty: " + produkty + " oplacone: " + oplacone;
     }
 
 }

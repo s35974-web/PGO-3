@@ -23,13 +23,16 @@ public class KlientKawiarni {
     }
 
     @Override
-    public boolean equals (Object obj){
-        if (this == obj){
+    public boolean equals(Object o) {
+        if (this == o) {
             return true;
         }
-        if (!(obj instanceof KlientKawiarni)){
-            return  false;
+
+        if (!(o instanceof KlientKawiarni)) {
+            return false;
         }
 
+        KlientKawiarni inny = (KlientKawiarni) o;
+        return this.idKlienta == inny.idKlienta;
     }
 }
