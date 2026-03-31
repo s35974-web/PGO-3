@@ -1,5 +1,4 @@
-public class ProduktMenu{
-    //    Julia jest najpiękniejsza najwspanialsza
+public class ProduktMenu {
     private String nazwa;
     private Double cena;
     private String kod;
@@ -7,7 +6,7 @@ public class ProduktMenu{
     private static int liczbaProduktow = 0;
 
 
-    public ProduktMenu(String kod, String nazwa,double cena ,String kategoria){
+    public ProduktMenu(String kod, String nazwa, double cena, String kategoria) {
         this.nazwa = nazwa;
         this.cena = cena;
         this.kategoria = kategoria;
@@ -15,28 +14,28 @@ public class ProduktMenu{
         liczbaProduktow++;
     }
 
-    public String getKod(){
+    public String getKod() {
         return kod;
     }
 
-    public String getNazwa(){
+    public String getNazwa() {
         return nazwa;
     }
 
-    public Double getCena(){
+    public Double getCena() {
         return cena;
     }
 
-    public String getKategoria(){
+    public String getKategoria() {
         return kategoria;
     }
 
-    public static int getLiczbaProduktow(){
+    public static int getLiczbaProduktow() {
         return liczbaProduktow;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Produkt: " + nazwa + ", kod: " + kod + "cena:" + cena + "kategoria:" + kategoria;
     }
 
@@ -53,8 +52,5 @@ public class ProduktMenu{
         ProduktMenu inny = (ProduktMenu) obj;
         return this.kod.equals(inny.kod);
     }
-
-
-
 
 }
